@@ -23,14 +23,10 @@ var maps = [];
 
   $(function() {
 
-    function codeAddress(address, map) {
+    function codeAddress(address) {
       geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-          map.setCenter(results[0].geometry.location);
-          var marker = new google.maps.Marker({
-              map: map,
-              position: results[0].geometry.location
-          });
+          
           //add to spreadsheet so we don't have to grab it every time
           
           var data = [];
@@ -41,7 +37,7 @@ var maps = [];
           data.desc = '';
           sendData(data);
 
-
+          return { lat: results[0].geometry.location.ob, lng: results[0].geometry.location.pb};
           
         } else {
           alert("Geocode was not successful for the following reason: " + status);
@@ -114,7 +110,7 @@ var maps = [];
           break;
           case 'report':
             food[gData[x].rowname].strikes += parseInt(gData[x].dataaddress,10);
-            if(food[gData[x].rowname].strikes > 3){
+            if(food[gData[x].rowname].strikes > 2){
               delete food[gData[x].rowname];
             }
           break;
@@ -148,35 +144,18 @@ var maps = [];
         if(localStorage['reports'+food[i].rowNumber]){
           $('.report[data-row='+food[i].rowNumber+']').text('reported');
         }
-        var mapOptions = {
-          zoom: 17,
-          center: new google.maps.LatLng($('#map'+food[i].rowNumber).attr('data-lat'), $('#map'+food[i].rowNumber).attr('data-lng')),
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          disableDefaultUI: true,
-          scrollwheel: false,
-          navigationControl: false,
-          mapTypeControl: false,
-          scaleControl: false,
-          draggable: false,
-          styles: [
-           // {stylers: [{ visibility: 'simplified' }]},
-            {elementType: 'labels', stylers: [{ visibility: 'on' }]}
-          ]
-        };
-        maps[food[i].rowNumber] = new google.maps.Map($('#map'+food[i].rowNumber)[0], mapOptions);
+        
 
         if(food[i].lat === undefined || food[i].lat === ''){
           var loc = codeAddress(food[i].address+", London Ontario", maps[food[i].rowNumber]);
+          //loc.lat, loc.lng
+          food[i].lat = loc.lat;
+          food[i].lng = loc.lng;
         } else {
           $('#map'+food[i].rowNumber).attr('data-lat', food[i].lat);
-          $('#map'+food[i].rowNumber).attr('data-lng', food[i].lng);
-          maps[food[i].rowNumber].setCenter(new google.maps.LatLng($('#map'+food[i].rowNumber).attr('data-lat'), $('#map'+food[i].rowNumber).attr('data-lng')));
-
-          var marker = new google.maps.Marker({
-              map: maps[food[i].rowNumber],
-              position: new google.maps.LatLng($('#map'+food[i].rowNumber).attr('data-lat'), $('#map'+food[i].rowNumber).attr('data-lng'))
-          });
+          $('#map'+food[i].rowNumber).attr('data-lng', food[i].lng); 
         }
+        $('#map'+food[i].rowNumber).css('background', 'url(http://maps.googleapis.com/maps/api/staticmap?center='+food[i].lat+','+food[i].lng+'&zoom=17&size=700x700&sensor=false) no-repeat center center');
       }
       
     }
