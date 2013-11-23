@@ -82,6 +82,14 @@ var maps = [];
 
     }
 
+    function compare(a,b) {
+      if (a.likes > b.likes)
+         return -1;
+      if (a.likes < b.likes)
+        return 1;
+      return 0;
+    }
+
     function showInfo(data) {
       // window.tabletopData = tabletop 
       gData = data;
@@ -117,6 +125,8 @@ var maps = [];
         }
       }
 
+      //todo: sort food based on likes
+      food.sort(compare);
       console.log(food);
 
       for(var i in food){

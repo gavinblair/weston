@@ -253,14 +253,6 @@
   margin: 0 15px 20px 0;
   width: 146px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
-  .logo {
-    background-image: url(../images/demo/logo-mask-2x.png);
-  }
-  .demo-browser {
-    background-image: url(../images/demo/browser-2x.png);
-  }
-}
 .demo-swatches-row [class*="col"] {
   float: left;
   min-height: 1px;
@@ -323,6 +315,7 @@ a {
 .container:nth-child(2n) .col-md-7{
   float: right;
 }
+
 .container:nth-child(2n) .col-md-5 {
   padding-left: 0;
   padding-right: 30px;
@@ -347,4 +340,73 @@ h3 em {
 .map-canvas {
   width: 100%;
   height: 250px;
+}
+
+
+@media (max-width: 992px) {
+  .container:nth-child(2n) .col-md-5,
+  .container:nth-child(2n) .col-md-7{
+    float: none;
+  }
+  .container:nth-child(2n) .col-md-5 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .row {
+    padding: 2em 0;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  p.intro {
+    width: 75%;
+  }
+
+  #addform {
+    width: 75%;
+  }
+}
+@media (max-width: 550px) {
+  body {
+    font-size: 14px;
+  }
+  .demo-logo {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .demo-logo small {
+    font-size: 20px;
+  }
+  .demo-headline {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  p.intro {
+    width: 100%;
+    padding: .5em;
+    margin: 0;
+  }
+  p {
+    font-size: 16px;
+    padding: .5em;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .row {
+    padding: .5em 0;
+  }
+}
+@media (max-width: 475px) {
+  .col-md-5, .col-md-7, .container:nth-child(2n) .col-md-5, .container:nth-child(2n) .col-md-7 {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .map-container {
+    height: 164px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
