@@ -155,7 +155,12 @@ var maps = [];
           $('#map'+food[i].rowNumber).attr('data-lat', food[i].lat);
           $('#map'+food[i].rowNumber).attr('data-lng', food[i].lng); 
         }
-        $('#map'+food[i].rowNumber).css('background', 'url(http://maps.googleapis.com/maps/api/staticmap?center='+food[i].lat+','+food[i].lng+'&zoom=17&size=700x700&sensor=false) no-repeat center center');
+        
+        if(food[i].streetview === '1'){
+          $('#map'+food[i].rowNumber).css('background', 'url(http://maps.googleapis.com/maps/api/streetview?location='+food[i].lat+','+food[i].lng+'&size=700x700&sensor=false) no-repeat center center');
+        } else {
+          $('#map'+food[i].rowNumber).css('background', 'url(http://maps.googleapis.com/maps/api/staticmap?center='+food[i].lat+','+food[i].lng+'&zoom=17&size=700x700&sensor=false) no-repeat center center');
+        }
       }
       
     }
