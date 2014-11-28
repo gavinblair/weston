@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Gluten Free Lunch</title>
+    <title>48 Weston St.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
@@ -17,66 +17,247 @@
       type="image/png" 
       href="http://gavinblair.github.io/images/fries.png" />
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-
-
-    <script type='text/html' id='food'>
-      <div class="container">
-        <div class='row'>
-          <div class='col-md-7'>
-            <h3>{{name}} <em>{{price}}</em></h3>
-            <p>
-              {{desc}}
-            </p>
-            <a class="btn btn-sm btn-danger yeah" data-row='{{rowNumber}}'><span class="fui-heart"></span> YEAH!</a>
-            <small class='likes'>&nbsp;&nbsp;{{likes}} {{peoplelike}} this. <span></span></small>
-          </div>
-          <div class='col-md-5'>
-            <div class='map-container img-rounded img-responsive'>
-              <div class="map-canvas" id='map{{rowNumber}}' data-lat='{{lat}}' data-lng='lng'></div>
-            </div>
-            <small>{{address}}</small>
-            <a class="pull-right report" data-row='{{rowNumber}}'><span class="fui-cross"></span> report</a>
-          </div>
-        </div>
-      </div>
-    </script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
   </head>
-  <body><img src='images/fries.png' style='display: none;' />
+  <body>
     <div class="container">
       <div class="demo-headline">
         <h1 class="demo-logo">
           <div class="logo"></div>
-          Gluten Free Lunch
-          <small>#downtown #ldnont</small>
+          48 Weston St.
+          <small>House for sale in London, ON</small>
         </h1>
         <br />
         <p class='intro'>
-          Eating gluten free is easy, unless you forgot to bring your lunch to work! Here are some options if you find yourself downtown and in need of some gluten free eats.
+          I’m going to save you some time. If you forewent your connection to friends and family and the internet for a year-long journey to the mystical mountains of the east, lived among the monks in search of true enlightenment, and sought the counsel of the highest order of the wise, you would learn what I am about to tell you for free:
         </p>
         <p class='intro'>
-          Know any good gluten free options downtown? Add it to the list!
+          <em>This house freaking rules, and you should buy it.</em>
         </p>
-        <div id='addform' class="form-group">
-          <input type="text" value="" id='name' placeholder="Meal and Restaurant" class="form-control">
-          <input type="text" value="" id='location' placeholder="123 Street" class="form-control">
-          <input type="text" value="" id='price' placeholder="Price" class="form-control">
-          <textarea placeholder="Description" id='desc' class="form-control"></textarea>
-        </div>
-        <p>
-          <a class="add btn btn-lg btn-danger"><span class="fui-plus"></span> Add a Meal</a>
-          <small class='woops'><span class='fui-cross'></span> woops</small>
+        <p class='intro'>
+          I’m serious. Let me break it down real quick.
         </p>
       </div> <!-- /demo-headline -->
     </div>
-    <div id='foods'></div>
+    <div id='foods'>
 
-    <p class='intro'>Ignited by <a href='http://twitter.com/gavinblair'>@gavinblair</a> &bull; <a href='http://github.com/gavinblair/lunch'>Fork me</a></p>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>Living</em> Room</h3>
+            <p>
+              This spacious room is where I spend most of my time with family and friends. The walls are orange. 
+            </p>
+            <p>
+              I’m going to pause for a moment to let that sink in.
+            </p>
+            <p>The walls.</p>
+            <p>Are.</p>
+            <p><span style="background: orange; color: white;">&nbsp;Orange&nbsp;</span>.</p>
+            <p>
+              Orange! Being in this room just makes you feel happy. The big window and archway into the dining room add to the awesomeness that is <em>The Living Room</em>.
+            </p>
+          </div>
+          <div class='col-md-5' style="margin-top: 3em;">
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/living2.png" height="215" width="365" />
+            </div>
+            <small>Orange!</small>
+          </div>
+          <div class='col-md-5'>
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/living1.png" />
+            </div>
+            <small>Oh, and the white wine of floors - hardwood!</small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>Dining</em> Room</h3>
+            <p>
+              The bright green of the dining room complements the crap out of the living room. My favourite part of the dining room is the window into the kitchen. Imagine sitting at the window, sipping wine as your significant other prepares a meal in the kitchen, chatting about how fricking awesome the living room is. You lock eyes. “I’m so glad we got this house,” he or she says. “Me too,” you whisper.
+            </p>
+          </div>
+          <div class='col-md-5' style="margin-top: 3em;">
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/dining.png" />
+            </div>
+            <small>Cheers!</small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>Kitchen</em></h3>
+            <p>
+              If our kitchen was a puppy, you’d snuggle the heck out of it. That is to say, it is the cutest puppy you have ever seen. A puppy with newly finished counters, a surprising amount of cupboard space and an astounding view of the backyards (yes, I pluralized “backyard”. More on that later.)
+            </p>
+          </div>
+          <div class='col-md-5'>
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/kitchen.png" />
+            </div>
+            <small>Check out that window to the dining room!</small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>Bed, Bath</em> & Beyond</h3>
+            <p>
+              The bathrooms have everything you need. Did I mention there’s two of them? The downstairs one has walk-in closet in it.
+            </p>
+            <p>
+              There are two bedrooms upstairs. The master bedroom has chocolate walls. These walls look delicious. Each bedroom has some cool wall-shelf thingies that are really great for showcasing your impressive collection of knick knacks.
+            </p>
+          </div>
+          <div class='col-md-5' style="margin-top: 3em;">
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/bed.png" />
+            </div>
+            <small>Delicious delicious chocolate.</small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>Back Yard</em></h3>
+            <p>
+              This is where things start to get awesome. I mean, I know we were already there, but we are REALLY there now, because this back yard is great. Lots of room to play. White picket fence. Bike shed. Oh, and <em>another back yard</em>.
+            </p>
+          </div>
+          <div class='col-md-5'>
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/back1.png" />
+            </div>
+            <small></small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>Other</em> Back Yard</h3>
+            <p>
+              That’s right, throught the gate there is another back yard, even larger than the first. This one has a pear tree, a vegetable garden, an amazing flowering tree and a fire pit. It also backs onto the ravine, so you have nothing but nature to look at while you are roasting your breakfast marshmallows.
+            </p>
+          </div>
+          <div class='col-md-5'>
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/back2.png" />
+            </div>
+            <small></small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>Downstairs</em></h3>
+            <p>
+              Come back inside for a moment - hello? You seem to be entranced by the beauty of the backyard view. I’ll give you a few moments...
+            </p>
+            <p>
+              Back inside, and down the stairwell (which is lined with very handy pantry shelves) we find ourselves in what we call the play room. Our kids have a table down here and they do art and crap while we drink coffee.
+            </p>
+            <p>
+              In the den there is a really sweet built-in bookshelf. Really sweet. Floor-to-ceiling.
+            </p>
+          </div>
+          <div class='col-md-5' style="margin-top: 3em;">
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/down.png" />
+            </div>
+            <small></small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-12'>
+            <h3><em>Office &amp; Sewing</em> Rooms</em></h3>
+            <p>
+              The office downstairs can be (and has been) a guest bedroom.
+            </p>
+            <p>
+              The sewing room also once served as yet another guest bedroom. Yes, that’s right, you can have (unofficially) up to 4 bedrooms in this house!
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-12'>
+            <h3><em>Laundry</em> Room</h3>
+            <p>
+              Our tour ends as many do, in the laundry room. Our laundry room has TONS of room for storage, appliances for all your laundry needs, an owned hot water heater and a 2012 furnace. You can see into the backyard while you fold your laundry.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>Location</em></h3>
+            <p>
+              With the amazing natural surroundings you are probably guessing that this house is in the middle of god-knows-where, but I’m happy to report that it is really close to downtown, as well as the following:
+            </p>
+            <ul>
+              <li>Curry’s is just around the corner</li>
+              <li>The LCBO is just up Wellington</li>
+              <li>If it took you 5 minutes to walk to Spike’s Indoor Volleyball, you would look weird for walking so slowly</li>
+              <li>There is an amazing park with a splashpad nearby</li>
+            </ul>
+          </div>
+          <div class='col-md-5' style="margin-top: 3em;">
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/porch.png" />
+            </div>
+            <small></small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container">
+        <div class='row'>
+          <div class='col-md-7'>
+            <h3><em>What are you waiting for?</em></h3>
+            <p>
+              <br /><a href="http://www.realtor.ca/propertyDetails.aspx?PropertyId=15039185" class="add btn btn-lg btn-danger"><span class="fui-search"></span> Check out the listing</a>
+            </p>
+          </div>
+          <div class='col-md-5' style="margin-top: 3em;">
+            <div class='map-container img-rounded img-responsive'>
+              <img src="images/porch.png" />
+            </div>
+            <small></small>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+
+    </div>
+
+    <p class='intro'><a href='http://twitter.com/gavinblair'>@gavinblair</a></p>
       
     
     <!-- Load JS here for greater good =============================-->
